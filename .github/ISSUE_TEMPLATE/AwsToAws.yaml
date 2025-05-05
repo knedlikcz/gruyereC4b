@@ -1,8 +1,7 @@
 name: Aws to Aws networking
 description: |
   Ticket to create or alter security groups to allow communication between AWS elements.
-title: Create peering connection
-type: terraform
+title: "Create peering connection"
 body:
   - type: markdown
     attributes:
@@ -73,11 +72,3 @@ body:
     attributes:
       label: Tags
       description: Any tags that need to be added to the security group.
-#a button to dynamicaly add another security group rule
-  - type: button
-    attributes:
-      label: Add another security group rule
-      description: Click to add another security group rule.
-      action: add_security_group_rule
-  - type: button
-
