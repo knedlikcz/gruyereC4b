@@ -1,0 +1,103 @@
+name: Aws to Aws networking
+description: |
+  Ticket to create or alter security groups to allow communication between AWS elements.
+title: Create peering connection
+type: terraform
+labels: [
+  - service request,
+  - aws,
+  - networking
+]
+projects: [
+  - aws,
+  - networking
+]
+assignees: [
+  - networking-team
+]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Description
+        This ticket is to create or alter security groups to allow communication between AWS elements.
+        Please provide the following information:
+
+        - **VPC ID**: The ID of the VPC where the security group will be created or altered.
+        - **Source Security Group hostnames**: The hostnames of the source security groups that need to be allowed access.
+        - **Destination Security Group hostnames**: The hostnames of the destination security groups that need to be allowed access.
+        - **Ports**: The port numbers that needs to be opened for communication.
+        - **Protocol**: The protocol (TCP, UDP, etc.) that needs to be used for communication.
+        - **CIDR**: The CIDR block that needs to be allowed access.
+        - **Description**: A brief description of the purpose of the security group rule.
+        - **Tags**: Any tags that need to be added to the security group.
+
+  - type: dropdown
+    attributes:
+      label: VPC ID
+      description: The ID of the VPC where the security group will be created or altered.
+      options:
+        - vpc-12345678
+        - vpc-87654321
+        - vpc-abcdef12
+        - vpc-fedcba98
+      required: true
+  - type: dropdown
+    attributes:
+      label: Source Security Group hostnames
+      description: The hostnames of the source security groups that need to be allowed access.
+      options:
+        - sg-12345678
+        - sg-87654321
+        - sg-abcdef12
+        - sg-fedcba98
+      required: true
+  - type: dropdown
+    attributes:
+      label: Destination Security Group hostnames
+      description: The hostnames of the destination security groups that need to be allowed access.
+      options:
+        - sg-12345678
+        - sg-87654321
+        - sg-abcdef12
+        - sg-fedcba98
+      required: true
+  - type: text
+    attributes:
+      label: Ports
+      description: The port numbers that needs to be opened for communication.
+      required: true
+  - type: dropdown
+    attributes:
+      label: Protocol
+      description: The protocol (TCP, UDP, etc.) that needs to be used for communication.
+      options:
+        - TCP
+        - UDP
+        - TCP/UDP
+        - ICMP
+        - ALL
+      required: true
+  - type: text
+    attributes:
+      label: CIDR
+      description: The CIDR block that needs to be allowed access.
+      required: true
+  - type: text
+    attributes:
+      label: Description
+      description: A brief description of the purpose of the security group rule.
+      required: true
+  - type: text
+    attributes:
+      label: Tags
+      description: Any tags that need to be added to the security group.
+      required: false
+#a button to dynamicaly add another security group rule
+  - type: button
+    attributes:
+      label: Add another security group rule
+      description: Click to add another security group rule.
+      action: add_security_group_rule
+  - type: button
+  
