@@ -3,18 +3,6 @@ description: |
   Ticket to create or alter security groups to allow communication between AWS elements.
 title: Create peering connection
 type: terraform
-labels: [
-  - "service request",
-  - "aws",
-  - "networking"
-]
-projects: [
-  - "aws",
-  - "networking"
-]
-assignees: [
-  - networking-team
-]
 body:
   - type: markdown
     attributes:
