@@ -47,7 +47,7 @@ body:
         - sg-87654321
         - sg-abcdef12
         - sg-fedcba98
-  - type: text
+  - type: input
     attributes:
       label: Ports
       description: The port numbers that needs to be opened for communication.
@@ -61,15 +61,15 @@ body:
         - TCP/UDP
         - ICMP
         - ALL
-  - type: text
+  - type: input
     attributes:
       label: CIDR
       description: The CIDR block that needs to be allowed access.
-  - type: text
+  - type: input
     attributes:
       label: Description
       description: A brief description of the purpose of the security group rule.
-  - type: text
+  - type: input
     attributes:
       label: Tags
       description: Any tags that need to be added to the security group.
