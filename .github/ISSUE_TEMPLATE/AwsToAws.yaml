@@ -29,7 +29,6 @@ body:
         - vpc-87654321
         - vpc-abcdef12
         - vpc-fedcba98
-      required: true
   - type: dropdown
     attributes:
       label: Source Security Group hostnames
@@ -39,7 +38,6 @@ body:
         - sg-87654321
         - sg-abcdef12
         - sg-fedcba98
-      required: true
   - type: dropdown
     attributes:
       label: Destination Security Group hostnames
@@ -49,12 +47,10 @@ body:
         - sg-87654321
         - sg-abcdef12
         - sg-fedcba98
-      required: true
   - type: text
     attributes:
       label: Ports
       description: The port numbers that needs to be opened for communication.
-      required: true
   - type: dropdown
     attributes:
       label: Protocol
@@ -65,22 +61,18 @@ body:
         - TCP/UDP
         - ICMP
         - ALL
-      required: true
   - type: text
     attributes:
       label: CIDR
       description: The CIDR block that needs to be allowed access.
-      required: true
   - type: text
     attributes:
       label: Description
       description: A brief description of the purpose of the security group rule.
-      required: true
   - type: text
     attributes:
       label: Tags
       description: Any tags that need to be added to the security group.
-      required: false
 #a button to dynamicaly add another security group rule
   - type: button
     attributes:
